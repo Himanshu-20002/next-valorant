@@ -4,6 +4,7 @@ import { gsap } from "gsap";
 
 const Loading = () => {
   useEffect(() => {
+    document.body.style.overflow = "hidden";
     const counter3 = document.querySelector('.counter-3');
     const counter2 = document.querySelector('.counter-2');
     const counter1 = document.querySelector('.counter-1');
@@ -42,7 +43,7 @@ const Loading = () => {
     // Loader animations
     gsap.to('.loader-1', {
       width: 200,
-      duration: 6,
+      duration: 5,
       ease: "power2.inOut"
     });
 
@@ -56,7 +57,7 @@ const Loading = () => {
     gsap.to('.loader-1', {
       scale: 40,
       duration: 1,
-      delay: 7,
+      delay: 6,
       ease: "power2.inOut",
     });
 
@@ -64,8 +65,12 @@ const Loading = () => {
     gsap.to('.loading-screen', {
       opacity: 0,
       duration: 0.5,
-      delay: 7.5,
+      delay: 7,
       ease: 'power1.inOut',
+      onComplete: () => {
+        // Re-enable scrolling after loading finishes
+        document.body.style.overflow = "auto";
+      },
     });
   }, []);
 

@@ -16,7 +16,7 @@ const Hero = () => {
   const videoRef = useRef(null);
   const centerVideoRef = useRef(null);
 
-  const videoSrc = "videos/hero-1.mp4"; // Single video source
+  const videoSrc = "https://res.cloudinary.com/dnmebxa5g/video/upload/v1757508751/Hero-1_ksewjs.webm"; // Single video source
 
   const handleMiniVideoClick = () => {
     setHasClicked(true);
@@ -93,8 +93,8 @@ const Hero = () => {
             muted
             playsInline
             autoPlay
-            preload="auto"
             id="center-video"
+            preload="metadata"
             className="absolute-center mt-15 scale-110 w-full h-full object-cover object-center z-20"
           />
         </div>
