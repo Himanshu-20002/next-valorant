@@ -124,6 +124,9 @@ const Hero = () => {
           </div>
         </div>
       </div>
+      <h1 className="special-font hero-heading text-black  text-[12px] absolute bottom-5 -z-40 right-5">
+          G<b>a</b>ming
+        </h1>
     </div>
   );
 };

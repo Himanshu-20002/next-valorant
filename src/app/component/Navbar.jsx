@@ -4,7 +4,7 @@ import Button from './Button'
 import { TiLocationArrow } from 'react-icons/ti'
 
 
-const navItems =['Nexus','vault','market','prologue','About','Contact']
+const navItems =['market','prologue','About','Contact']
 
 const Navbar = () => {
    

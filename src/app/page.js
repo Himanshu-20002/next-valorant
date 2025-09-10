@@ -6,11 +6,13 @@ import Valorent from "./component/Valorent";
 import Story from "./component/Story";
 import Contact from "./component/Contact";
 import Footer from "./component/Footer";
+import Loading from "./component/Loading";
 
 export default function Home() {
   return (
     <main className= 'relative  w-screen overflow-x-hidden'>
-      {/* <Navbar/> */}
+      <Navbar/>
+      <Loading/>
       <Hero/>
       <About/>
       <Valorent/>
